@@ -1,5 +1,8 @@
 package hand_dot.Thailand_Love.enums;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
+
 import hand_dot.Thailand_Love.humans.Adum;
 import hand_dot.Thailand_Love.humans.Anjii;
 import hand_dot.Thailand_Love.humans.Bi;
@@ -51,5 +54,10 @@ public enum Sex {
 
 	public Human getHuman() {
 		return human;
+	}
+
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
 	}
 }

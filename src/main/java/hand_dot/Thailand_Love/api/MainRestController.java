@@ -14,12 +14,12 @@ public class MainRestController {
 	static final String PACKAGE = "hand_dot.Thailand_Love.humans.";
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping(value="{human}",method=RequestMethod.GET)
-	Human getHuman(@PathVariable String human){
+	@RequestMapping(value="{humanType}",method=RequestMethod.GET)
+	Human getHuman(@PathVariable String humanType){
 		Human returnHuman = null;
 		Class<Human> clazz;
 		try {
-			clazz = (Class<Human>) loader.loadClass(PACKAGE+human);
+			clazz = (Class<Human>) loader.loadClass(PACKAGE+humanType);
 			returnHuman = clazz.newInstance();
 		} catch (InstantiationException | IllegalAccessException |ClassNotFoundException e) {
 			throw new RuntimeException(e);

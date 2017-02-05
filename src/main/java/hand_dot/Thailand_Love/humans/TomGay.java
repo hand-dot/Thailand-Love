@@ -1,9 +1,10 @@
 package hand_dot.Thailand_Love.humans;
 
 import hand_dot.Thailand_Love.enums.Sex;
-import hand_dot.Thailand_Love.humans.abstracts.Tom;
+import hand_dot.Thailand_Love.humans.abstracts.Woman;
 
-public class TomGay  extends Tom{
+
+public class TomGay  extends Woman{
 
 	public TomGay() {
 		this.setVisual(Sex.WOMAN);
